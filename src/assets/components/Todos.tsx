@@ -2,7 +2,7 @@
 type Todo = {
     id: number;
     text: string;
-    completed: boolean;
+    completed?: boolean;
 }
 
 type Props = {
