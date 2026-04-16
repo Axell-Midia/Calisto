@@ -17,6 +17,11 @@ const mockTodos = [
     text: "tarea 3",
     completed: false
   }
+  {
+    id: 4,
+    text: "tarea 4",
+    completed: false
+  }
 ]
 
 
