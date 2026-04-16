@@ -1,4 +1,3 @@
-import type { Todo } from "../App";
 
 type Todo = {
     id: number;
