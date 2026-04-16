@@ -14,10 +14,6 @@ export function Todos({ todos }: Props) {
         <ul>
             {todos.map((todo) => (
                 <li key={todo.id}>
-                    <label>
-                        <input type="checkbox" checked={todo.completed} readOnly />
-                        {todo.text}
-                    </label>
                 </li>
             ))}
         </ul>
