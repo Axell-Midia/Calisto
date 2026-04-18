@@ -3,8 +3,7 @@ import MyButton from "./assets/components/Button"
 const App = () => {
   return (
     <div>
-
-      <MyButton>
+      <MyButton >
         Acceder
       </MyButton>
     </div>
