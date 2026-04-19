@@ -12,10 +12,12 @@ const styles = {
 
 function MyButton({ children, c, variant }: ButtonProps) {
   return (
-    <button onClick={c}
-      className={styles[variant || "primary"]}>
-      {children}
-    </button>
+    <>
+      <button onClick={c}
+        className={styles[variant || "primary"]}>
+        {children}
+      </button>
+    </>
   )
 }
 
