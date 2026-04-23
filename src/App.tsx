@@ -1,7 +1,7 @@
 import MyButton from "./assets/components/Button"
 import Contador from "./assets/components/Contador"
 import Formulario from "./assets/components/Formulario"
-
+import Login from "./assets/components/Login"
 const App = () => {
 
   return (
@@ -19,6 +19,7 @@ const App = () => {
         </MyButton>
         <Contador />
         <Formulario label="Saludar" />
+        <Login />
       </div>
     </>
   )

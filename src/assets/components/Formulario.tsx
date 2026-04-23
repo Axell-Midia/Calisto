@@ -21,16 +21,13 @@ const Formulario = ({ label }: FormularioProps) => {
         <div className="flex flex-col items-center justify-center">
             <h2 className="text-xl font-semibold">{label}</h2>
             <input
-                type="text"
-                value={nombre}
-                onChange={handleChange}
-                placeholder="Ingresa tu nombre"
+                type="text" value={nombre}
+                onChange={handleChange} placeholder="Ingresa tu nombre"
                 className="bg-gray-200 text-black p-2 rounded mb-2"
             />
             <button
                 onClick={handleClick}
-                className="bg-blue-500 text-white py-2 px-4 rounded"
-            >
+                className="bg-blue-500 text-white py-2 px-4 rounded">
                 Mostrar saludo
             </button>
         </div>
