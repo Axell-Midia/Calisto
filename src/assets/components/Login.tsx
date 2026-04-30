@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 const Login = () => {
-    const [form, setForm] = useState({
-        email: "",
-        password: ""
-    });
+    const [form, setForm] = useState({ email: "", password: "" });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         /* const name = e.target.name;
