@@ -3,6 +3,7 @@ import { useState } from "react"
 const Contador = () => {
     const [valor, setValor] = useState(0)
 
+    // Usamos el setvalor para actualizar el estado de valor
     const sumar = () => {
         setValor(valor + 1)
     }

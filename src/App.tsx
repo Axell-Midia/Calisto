@@ -2,24 +2,26 @@ import MyButton from "./assets/components/Button"
 import Contador from "./assets/components/Contador"
 import Formulario from "./assets/components/Formulario"
 import Login from "./assets/components/Login"
+import Password from "./assets/components/Password"
 const App = () => {
 
   return (
     <>
       <div className="bg-black text-white min-h-screen">
 
-        <MyButton variant="primary" c={() => alert("login")} >
+        <MyButton variant="primary" cambio={() => alert("login")} >
           Acceder
         </MyButton>
         <MyButton variant="secondary">
           Registrarse
         </MyButton>
-        <MyButton variant="danger" c={() => alert("delete")}>
+        <MyButton variant="danger" cambio={() => alert("delete")}>
           Eliminar
         </MyButton>
         <Contador />
         <Formulario label="Saludar" />
         <Login />
+        <Password />
       </div>
     </>
   )
