@@ -2,11 +2,22 @@
 import { useState } from "react";
 
 const Likes = () => {
-    const [likes, setlikes] = useState(0);
+    const [likes, setLikes] = useState(0);
+    console.log(likes);
+
+    const sumar = () => {
+        setLikes(likes + 1);
+    }
+
+    const restar = () => {
+        setLikes(likes - 1);
+    }
 
     return (
         <>
-            <button onClick={() => { setlikes(likes + 1) }}>  </button>
+            <p>Likes: {likes}</p>
+            <button onClick={sumar}>Sumar</button>
+            <button onClick={restar}>Restar</button>
         </>
     )
 }
