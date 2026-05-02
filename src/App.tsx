@@ -3,6 +3,7 @@ import Contador from "./assets/components/Contador"
 import Formulario from "./assets/components/Formulario"
 import Login from "./assets/components/Login"
 import Password from "./assets/components/Password"
+import Likes from "./assets/components/Likes"
 const App = () => {
 
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Formulario label="Saludar" />
         <Login />
         <Password />
+        <Likes />
       </div>
     </>
   )
