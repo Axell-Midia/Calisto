@@ -14,7 +14,7 @@ const Formulario = ({ label }: FormularioProps) => {
 
     // Función para manejar el click en el botón
     const handleClick = () => {
-        alert(`Hola, ${nombre}!`);
+        alert(`Hola, ${nombre}`);
     };
 
     return (
