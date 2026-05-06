@@ -4,6 +4,7 @@ import Formulario from "./assets/components/Formulario"
 import Login from "./assets/components/Login"
 import Password from "./assets/components/Password"
 import Likes from "./assets/components/Likes"
+import Form from "./assets/components/Form"
 const App = () => {
 
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Login />
         <Password />
         <Likes />
+        <Form />
       </div>
     </>
   )
