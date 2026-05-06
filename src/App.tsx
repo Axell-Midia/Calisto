@@ -1,33 +1,32 @@
-import { useState } from "react";
-import { Todos } from "./assets/components/Todos";
-
-const mockTodos = [
-  {
-    id: 1,
-    text: "tarea 1",
-    completed: false,
-  },
-  {
-    id: 2,
-    text: "tarea 2",
-    completed: false,
-  },
-  {
-    id: 3,
-    text: "tarea 3",
-    completed: false,
-  },
-  {
-    id: 4,
-    text: "tarea 4",
-    completed: false,
-  },
-];
-
+import MyButton from "./assets/components/Button"
+import Contador from "./assets/components/Contador"
+import Formulario from "./assets/components/Formulario"
+import Login from "./assets/components/Login"
+import Password from "./assets/components/Password"
+import Likes from "./assets/components/Likes"
 const App = () => {
-  const [todos, setTodos] = useState(mockTodos);
 
-  return <Todos todos={todos} />;
-};
+  return (
+    <>
+      <div className="bg-black text-white min-h-screen">
+
+        <MyButton variant="primary" cambio={() => alert("login")} >
+          Acceder
+        </MyButton>
+        <MyButton variant="secondary">
+          Registrarse
+        </MyButton>
+        <MyButton variant="danger" cambio={() => alert("delete")}>
+          Eliminar
+        </MyButton>
+        <Contador />
+        <Formulario label="Saludar" />
+        <Login />
+        <Password />
+        <Likes />
+      </div>
+    </>
+  )
+}
 
 export default App;
