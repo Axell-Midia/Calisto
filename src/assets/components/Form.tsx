@@ -1,47 +1,67 @@
 import { useState } from "react";
 
+const initialValues = {
+    name: "",
+    lastName: "",
+    email: "",
+    password: "",
+};
+
 const Form = () => {
-    const [user, setUser] = useState({
-        username: "",
-        password: "",
-    })
+    const [values, setValues] = useState(initialValues);
 
+    const handleChange = ({ target }) => {
+        const { name, value } = target;
 
-    // los formularios recargan la pagina por defecto, para evitarlo se usa preventDefaul()
+        setValues((prev) => ({ ...prev, [name]: value, }));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("El formulario se ha enviado exitosamente");
-        console.log(user);
-    }
 
+        console.log(values);
 
-    const handleUsername = (e) => {
-        setUser({ ...user, username: e.target.value })
-    }
+        // limpiar formulario
+        setValues(initialValues);
+    };
 
-    const handlePassword = (e) => {
-        setUser({ ...user, password: e.target.value })
-    }
-
-    return <>
+    return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Nombre:</label>
             <input
                 type="text"
-                id="username"
-                onChange={handleUsername}
-                value={user.username}
+                name="name"
+                placeholder="Nombre"
+                value={values.name}
+                onChange={handleChange}
             />
-            <label htmlFor="password">Contraseña:</label>
+
+            <input
+                type="text"
+                name="lastName"
+                placeholder="Apellido"
+                value={values.lastName}
+                onChange={handleChange}
+            />
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Correo"
+                value={values.email}
+                onChange={handleChange}
+            />
+
             <input
                 type="password"
-                id="password"
-                onChange={handlePassword}
-                value={user.password}
+                name="password"
+                placeholder="Contraseña"
+                value={values.password}
+                onChange={handleChange}
             />
+
             <button type="submit">Enviar</button>
         </form>
-    </>
-}
+    );
+};
 
 export default Form;
