@@ -12,7 +12,6 @@ const Form = () => {
 
     const handleChange = ({ target }) => {
         const { name, value } = target;
-
         setValues((prev) => ({ ...prev, [name]: value, }));
     };
 
@@ -25,30 +24,21 @@ const Form = () => {
         setValues(initialValues);
     };
 
+    const inputStyles =
+        "p-3 rounded bg-zinc-800 outline-none focus:ring-2 focus:ring-blue-500";
+
+    const buttonStyles =
+        "p-3 rounded bg-blue-500 hover:bg-blue-600 cursor-pointer";
+
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="name"
-                placeholder="Nombre"
-                value={values.name}
-                onChange={handleChange}
-            />
-
-            <input
-                type="text"
-                name="lastName"
-                placeholder="Apellido"
-                value={values.lastName}
-                onChange={handleChange}
-            />
-
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-zinc-900 p-8 rounded-xl w-96">
             <input
                 type="email"
                 name="email"
                 placeholder="Correo"
                 value={values.email}
                 onChange={handleChange}
+                className={inputStyles}
             />
 
             <input
@@ -57,10 +47,11 @@ const Form = () => {
                 placeholder="Contraseña"
                 value={values.password}
                 onChange={handleChange}
+                className={inputStyles}
             />
 
-            <button type="submit">Enviar</button>
-        </form>
+            <button type="submit" className={buttonStyles}>Enviar</button>
+        </form >
     );
 };
 
